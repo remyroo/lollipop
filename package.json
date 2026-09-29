@@ -14,7 +14,9 @@
     "preview": "vite preview",
     "typecheck": "tsc -b",
     "lint": "eslint . --max-warnings 0",
-    "test": "vitest run"
+    "test": "vitest run",
+    "test:db": "supabase test db --local --network-id local-network",
+    "db:types": "supabase gen types --local --lang typescript --schema public > src/types/database.types.ts"
   },
   "dependencies": {
     "@supabase/supabase-js": "2.116.0",
@@ -38,6 +40,7 @@
     "eslint-plugin-react-hooks": "7.1.1",
     "eslint-plugin-react-refresh": "0.5.7",
     "globals": "17.12.0",
+    "supabase": "2.118.0",
     "tailwindcss": "4.3.3",
     "typescript": "6.0.3",
     "typescript-eslint": "8.70.1",
